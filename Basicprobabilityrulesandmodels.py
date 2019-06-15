@@ -1,0 +1,5 @@
+pmb=float(input())
+pab=float(input())
+p1=float(input())
+x=p1*(pmb*(1-pab)+(1-pmb)*pab)
+print("%.6f" % x)
