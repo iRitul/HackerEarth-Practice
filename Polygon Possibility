@@ -1,0 +1,13 @@
+T=int(input())
+while(T!=0):
+    n=int(input())
+    a=list(map(int,input().split()))
+    m=max(a)
+    sum=0
+    for i in range(n):
+        sum+=a[i]
+    if(m<(sum-m)):
+        print("Yes")
+    else:
+        print("No")
+    T=T-1
