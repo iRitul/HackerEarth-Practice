@@ -1,0 +1,10 @@
+a=list(map(int,input().split()))
+sum = 0
+sum1 = 0
+for i in range(9):
+    if(i%2==0):
+        sum = sum + a[i]
+    else:
+        sum1 = sum1 + a[i]
+print(sum)
+print(sum1)
