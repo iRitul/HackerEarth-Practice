@@ -1,0 +1,4 @@
+import math
+N=float(input())
+x=math.exp(-0.01*N)
+print("%.6f"%x)
