@@ -1,0 +1,16 @@
+import math
+def func(x):
+    return x*(x - 6)
+def mino(l, r):
+    for _ in range(60):
+        onethird = (r-l)/3
+        mid1 = l + onethird
+        mid2 = mid1 + onethird
+        if func(mid1) > func(mid2):
+            l = mid1
+        else:
+            r = mid2
+    return math.floor(2*func(l) + 7)
+for _ in range(int(input())):
+    l, r = [int(x) for x in input().split()]
+    print(mino(l, r))
