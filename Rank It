@@ -1,0 +1,21 @@
+def Binary(A,X):
+    low = 0
+    high = len(A)-1
+    while(low<=high):
+        mid = int((low+high)/2)
+        if A[mid] == X:
+            print(mid+1)
+            break
+        elif A[mid] < X:
+            low = mid + 1
+        elif A[mid] > X:
+            high = mid - 1
+        else:
+            return -1
+N = int(input())
+A = list(map(int, input().split()))
+A.sort()
+q = int(input())
+for i in range(0,q):
+    x = int(input())
+    Binary(A,x)
