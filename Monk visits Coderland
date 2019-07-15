@@ -1,0 +1,15 @@
+t= int(input())
+while t!=0:
+    n=int(input())
+    c=list(map(int, input().split()))
+    l=list(map(int, input().split()))
+    sum=0
+    cmin=c[0]
+    for i in range(len(c)):
+        if cmin>c[i]:
+            cmin=c[i]
+            sum= sum + cmin*l[i]
+        else:
+            sum=sum+cmin*l[i]
+    print(sum)
+    t=t-1
