@@ -1,0 +1,36 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+# Complete the repeatedString function below.
+def repeatedString(s, n):
+    sa=0
+    h=0
+    for ch in s:
+        if ch=='a':
+            sa=sa+1
+    x=n//len(s)
+    y=n%len(s)
+    for i in range(y):
+        if s[i]=='a':
+            h=h+1
+    ss=x*sa+h
+    return(ss)
+
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    n = int(input())
+
+    result = repeatedString(s, n)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
