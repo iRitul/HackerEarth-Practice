@@ -1,0 +1,20 @@
+s=input()
+t=input()
+k=int(input())
+a=len(s)
+b=len(t)
+c=0
+x=min(a,b)
+for i in range(x):
+    if s[i]==t[i]:
+        c=c+1
+    else:
+        break
+if (a+b-2*c)>k :
+    print("No")
+elif (a+b-2*c)%2==k%2:
+    print("Yes")
+elif (a+b-k)<0:
+    print("Yes")
+else:
+    print("No")
