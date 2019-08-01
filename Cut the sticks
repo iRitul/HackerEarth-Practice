@@ -1,0 +1,9 @@
+n= int(input())
+ls=list(map(int, input().split()))
+ss=set(ls)
+ls1=sorted(list(ss))
+x=len(ls1)
+for i in range(x):
+    print(n)
+    t=ls.count(ls1[i])
+    n=n-t
