@@ -1,0 +1,11 @@
+import math
+s=input()
+s=s.replace(" ","")
+n=len(s)
+t=math.ceil(math.sqrt(n))
+x=0
+res=""
+for i in range(x,t,1):
+    res += s[x::t]+" "
+    x +=1
+print(res)
