@@ -1,0 +1,19 @@
+def isbalanced(str):
+    d = {'}':'{', ')':'(', ']':'[' }
+    open_s = []
+    for i in str:
+        if i in d.values():
+            open_s.append(i)
+        if d.get(i):
+            if open_s and open_s[-1] == d.get(i):
+                open_s.pop()
+            else:
+                return 'not balanced'
+    if open_s:
+        return 'not balanced'
+    else:
+        return 'balanced'
+n = int(input())
+for i in range(n):
+    str1=input()
+    print(isbalanced(str1))
